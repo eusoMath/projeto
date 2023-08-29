@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*
+    background-image: url(./assets/bg-mobile.jpg) ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+    
+    background: var(--bg-url) no-repeat top center/cover;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container{
+    /*border: 0.1px solid white;*/
+    width: 360px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+
+}
+
+/* profile*/
+
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+}
+
+#profile p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/*switch */
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background:var(--switch-bg-url);
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--span-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.111);
+    backdrop-filter: blur(4px);
+    border-radius: 99999px;
+}
+
+.light #switch span{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* links */
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+} 
+
+ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 52px;
+    background: var(--stroke-color);
+    border-radius: 9px;
+    backdrop-filter: blur(4px);
+    transition: background 0.4s;
+}
+
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: var(--border);
+}
+
+/*social links*/
+
+#socials{
+    display: flex;
+    padding: 24px 0;
+    font-size: 24px;
+    justify-content: center;
+}
+
+#socials a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.4s;
+}
+
+#socials a:hover{
+    background: var(--highligh-color);
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+:root{
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color:rgba(255, 255, 255, 0.1); 
+    --surface-color:rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --highligh-color: rgba(255, 255, 255, 0.1);
+    --border: solid 1px rgba(255, 255, 255, 0.05);
+    --switch-bg-url: rgba(255, 255, 255, 1) url(./assets/moon-stars.svg) no-repeat center;
+
+}
+
+
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.05); 
+    --surface-color-hover: rgba(0, 0, 0, 0.);
+    --highligh-color: rgba(0, 0, 0, 0.05);
+    --border: solid 1px rgba(0, 0, 0, 0.15);
+    --switch-bg-url:  #ffffff url(./assets/sun.svg) no-repeat center;
+    --span-bg-color: rgba(0, 0, 0, 0.05);
+
+}
