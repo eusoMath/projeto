@@ -15,6 +15,7 @@ body{
     */
     
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 
 body *{
@@ -167,4 +168,14 @@ footer{
     --switch-bg-url:  #ffffff url(./assets/sun.svg) no-repeat center;
     --span-bg-color: rgba(0, 0, 0, 0.05);
 
+}
+
+/* media queries */
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
